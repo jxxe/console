@@ -1,0 +1,60 @@
+<!--
+    TODO:
+    - use on binding for mouseenter/mouseleave
+    - make hover animation dependent on text length
+    - message actions
+        - animate in on hover
+        - pin (save from deletion)
+            - inner box shadow when pinned
+        - google error
+    - fix scrolling errors
+    - fade out top of error feed
+    - turn into chrome extension
+    - add error/log/warning counter
+    - add clear console button
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Test</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+</head>
+<body>
+    
+    <form id="testing">
+        <input autofocus type="text" id="console" placeholder="Type a message...">
+    </form>
+    
+    <button id="clear">Clear Console</button>
+
+    <div class="console-messages-wrapper">
+        <div class="console-messages"></div>
+        <div class="console-buttons">
+            <div class="console-button" data-type="warn">
+                <i class="material-icons-outlined">report_problem</i>
+                <span class="console-warnings-count">0</span>
+            </div>
+            <div class="console-button" data-type="error">
+                <i class="material-icons-outlined">cancel</i>
+                <span class="console-errors-count">0</span>
+            </div>
+            <div class="console-button" data-type="log">
+                <i class="material-icons-outlined">info</i>
+                <span class="console-logs-count">0</span>
+            </div>
+            <div class="console-clear">
+                <i class="material-icons-outlined">delete</i>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="javascript.js"></script>
+
+</body>
+</html>
